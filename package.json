@@ -1,0 +1,24 @@
+{
+  "name": "kenburns-dom",
+  "version": "1.0.0",
+  "description": "Ken Burns Effect – DOM implementation",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gre/kenburns-dom"
+  },
+  "keywords": [
+    "kenburns",
+    "dom"
+  ],
+  "author": "Gaëtan Renaudeau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gre/kenburns-dom/issues"
+  },
+  "homepage": "https://github.com/gre/kenburns-dom",
+  "dependencies": {
+    "kenburns-core": "^1.0.0",
+    "zanimo": "^1.1.2"
+  }
+}
