@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/gre/kenburns-dom",
   "dependencies": {
-    "kenburns-core": "^1.0.0",
-    "zanimo": "^1.1.2"
+    "vendor-prefix": "^0.1.0"
   }
 }
