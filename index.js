@@ -10,6 +10,9 @@ function KenBurnsDOMTrait (container) {
 }
 
 KenBurnsDOMTrait.prototype = {
+  clamped: true,
+  rgb: [0,0,0],
+
   getViewport: function () {
     return this.elt.getBoundingClientRect();
   },
