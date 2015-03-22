@@ -23,8 +23,11 @@ KenBurnsDOMTrait.prototype = {
 
   _transformForRect: function (rect) {
     var viewport = this.getViewport();
-    var scale = [ viewport.width / rect[2], viewport.height / rect[3] ];
-    var translate = [ Math.round(-rect[0])+"px", Math.round(-rect[1])+"px" ];
+    var scale = viewport.width / rect[2]; // no need to handle the height dimension because ratio is preserved
+    var translate = [
+      (-rect[0])+"px",
+      (-rect[1])+"px"
+    ];
     return "scale("+scale+") translate("+translate+")";
   },
 
@@ -38,8 +41,8 @@ KenBurnsDOMTrait.prototype = {
       this._reset();
       this.elt.appendChild(image);
       image.style.position = "absolute";
-      image.style.top = "0";
-      image.style.left = "0";
+      image.style.top = 0;
+      image.style.left = 0;
       image.style[transformOriginAttr] = "0% 0%";
       this.image = image;
     }
