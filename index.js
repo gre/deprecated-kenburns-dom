@@ -28,7 +28,7 @@ KenBurnsDOMTrait.prototype = {
       (-rect[0])+"px",
       (-rect[1])+"px"
     ];
-    return "scale("+scale+") translate("+translate+")";
+    return "scale3d("+scale+") translate3d("+translate+")";
   },
 
   _reset: function () {
