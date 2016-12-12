@@ -7,6 +7,7 @@ function KenBurnsDOMTrait (container) {
   // At least we need relative
   if (container.style.position !== "absolute") container.style.position = "relative";
   container.style.overflow = "hidden";
+  container.style.willChange = "transform"; // already supported by some browsers, also for GPU acceleration
 }
 
 KenBurnsDOMTrait.prototype = {
@@ -28,7 +29,8 @@ KenBurnsDOMTrait.prototype = {
       (-rect[0])+"px",
       (-rect[1])+"px"
     ];
-    return "scale("+scale+") translate("+translate+")";
+    // translateZ for triggering GPU acceleration
+    return "scale("+scale+") translate("+translate+") translateZ(0)";
   },
 
   _reset: function () {
